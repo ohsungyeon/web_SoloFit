@@ -1,0 +1,269 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow"; /* 폰트 이름 정확히 지정 */
+    font-weight: 300;             /* Light 굵기 */
+    overflow-x: hidden; /* 수평 스크롤 방지 */
+}
+
+/* 네비게이션 바 아래 요소와 겹치지 않도록 여백 추가 */
+body {
+    padding-top: 60px; /* 네비게이션 바의 높이만큼 여백 추가 */
+}
+
+/* 네비게이션 시작 */ 
+.navbar {
+    position: fixed; /* 스크롤해도 고정 */
+    top: 0; /* 화면 상단에 고정 */
+    left: 0; /* 화면 왼쪽에 고정 */
+    width: 100%; /* 전체 너비 차지 */
+    z-index: 1000; /* 다른 요소 위에 나타나도록 설정 */
+    border-bottom: 1px solid #ddd; /* 네비게이션 하단 구분선 */
+    background-color: #f8f9fa; /* 배경색 설정 */
+}
+
+/* 로고 스타일 */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #253C57 !important;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4682B4;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+    color: #253C57;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f4f4f4;
+    color: #4682B4;
+}
+
+/* 드롭다운 메뉴 간의 간격 조정 */
+.navbar-nav .nav-item {
+    margin-right: 3.5rem; /* 메뉴 간의 오른쪽 여백 추가 */
+}
+
+/* 로그인 및 회원가입 스타일 */
+.auth-links a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    color: #4682B4;
+}
+
+.auth-divider {
+    color: #ccc;
+    margin: 0 0.5rem;
+} 
+/* 네비게이션 끝 */ 
+
+/* 운동 기록 시작 */
+.section-title {
+    margin-top: 3rem;   /* 위 여백 추가 */
+    margin-bottom: 3rem !important;  /* 아래 여백 추가 */
+}
+
+/* 콜랩스 내용 스타일 */
+.collapsible-content {
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    display: none; /* 초기에는 숨김 */
+}
+
+/* 이미지 스타일 */
+.image-container img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* 사용자 정보 스타일 */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-content {
+    padding: 10px;
+    background-color: #dedede;
+}
+
+/* 프로필 아이콘 스타일 */
+.profile-icon {
+    font-size: 3rem; /* 아이콘 크기 설정 */
+    color: #555; /* 기본 색상 설정 */
+}
+
+/* 아이콘 스타일 */
+.like-icon, .mail-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.follow-btn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+
+/* 아이콘 기본 스타일 */
+.icon-btn {
+    font-size: 1.5rem; /* 아이콘 크기 */
+    color: #555; /* 기본 색상 */
+    transition: color 0.3s ease, transform 0.3s ease; /* 부드러운 색상 및 크기 변화 */
+    cursor: pointer; /* 마우스 포인터를 손가락 모양으로 변경 */
+    margin-right: 10px; /* 아이콘 간격 */
+}
+
+/* 호버 시 스타일 */
+.icon-btn:hover {
+    color: #0d6efd; /* 호버 시 색상 (파란색) */
+    transform: scale(1.2); /* 아이콘 확대 */
+}
+
+/* 운동 일지 공유하기 버튼 스타일 */
+.btn-primary {
+    font-size: 1.2rem; /* 버튼 글자 크기 */
+    padding: 0.75rem 2rem; /* 버튼 내부 여백 */
+    border-radius: 8px; /* 버튼 테두리 둥글게 */
+    background-color: #253C57; /* 버튼 색상 */
+    border: none; /* 테두리 제거 */
+    transition: all 0.3s ease-in-out; /* 부드러운 효과 */
+}
+
+.btn-primary:hover {
+    background-color: #4682B4; /* 호버 시 색상 변경 */
+}
+/* 운동 기록 끝 */
+
+/* 풋터 스타일 시작 */
+.bold-text {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: white;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo h2 {
+    font-size: 2.2rem;
+    color: #253C57;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* SNS 아이콘 스타일 */
+.social-icons {
+    margin-top: 1rem; /* 텍스트와 아이콘 간격 */
+    display: flex;
+    gap: 1rem; /* 아이콘 간격 */
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px; /* 원형 크기 */
+    height: 25px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-color: #253C57; /* 아이콘 배경색 */
+    color: white; /* 아이콘 색상 */
+    font-size: 0.8rem; /* 아이콘 크기 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #4682B4; /* 호버 시 색상 변경 */
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #253C57;
+}
+
+.footer-link {
+    color: #555; /* 회색 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.3s ease; /* 부드러운 색상 전환 */
+}
+
+.footer-link:hover {
+    color: #4682B4; /* 호버 시 파란색으로 변경 */
+    text-decoration: none; /* 호버 시에도 밑줄 없음 */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    background-color: #f4f4f4; /* 회색 배경 */
+    padding-bottom: 1rem; /* 아래쪽 여백 추가 */
+}
+/* 풋터 스타일 끝 */
