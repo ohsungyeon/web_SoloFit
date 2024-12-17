@@ -1,0 +1,640 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow"; /* 폰트 이름 정확히 지정 */
+    font-weight: 300;             /* Light 굵기 */
+    overflow-x: hidden; /* 수평 스크롤 방지 */
+}
+
+/* 네비게이션 시작 */ 
+.navbar {
+    position: fixed; /* 스크롤해도 고정 */
+    top: 0; /* 화면 상단에 고정 */
+    left: 0; /* 화면 왼쪽에 고정 */
+    width: 100%; /* 전체 너비 차지 */
+    z-index: 1000; /* 다른 요소 위에 나타나도록 설정 */
+    border-bottom: 1px solid #ddd; /* 네비게이션 하단 구분선 */
+    background-color: #f8f9fa; /* 배경색 설정 */
+}
+
+/* 로고 스타일 */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #253C57 !important;
+}
+
+/* 드롭다운 메뉴 스타일 */
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #4682B4;
+}
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+    color: #253C57;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #f4f4f4;
+    color: #4682B4;
+}
+
+/* 드롭다운 메뉴 간의 간격 조정 */
+.navbar-nav .nav-item {
+    margin-right: 3.5rem; /* 메뉴 간의 오른쪽 여백 추가 */
+}
+
+/* 로그인 및 회원가입 스타일 */
+.auth-links a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+.auth-links a:hover {
+    color: #4682B4;
+}
+
+.auth-divider {
+    color: #ccc;
+    margin: 0 0.5rem;
+} 
+/* 네비게이션 끝 */  
+
+/* solofit 대표 섹션 시작 */
+.hero {
+    position: relative;
+    background-image: url('이미지/메인페이지.png');
+    background-size: cover;
+    background-position: center; /* 이미지 정렬 */
+    background-repeat: no-repeat;
+    color: white;
+    height: 90vh; /* 전체 섹션 높이 */
+    margin-top: 50px; /* 위쪽 여백 추가 */
+}
+
+.hero-text h1 {
+    transform: translateY(-8.5rem);  /* 아래로 이동 */
+    font-size: 6.5rem; /* 텍스트 크기 */
+    line-height: 1.2;
+    margin-left: 7rem; /* 왼쪽 여백 추가 */
+}
+
+.hero-text .tagline {
+    transform: translateY(-9.5rem);  /* 아래로 이동 */
+    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    font-size: 1.8rem; /* 하단 텍스트 크기 */
+    line-height: 1.5; /* 줄 간격 */
+    margin-left: 14rem; /* 왼쪽 여백 추가 */
+}
+
+.social-links {
+    position: absolute; /* 부모 요소(.hero)를 기준으로 배치 */
+    bottom: 25px; /* 섹션의 아래에서 10px 간격 */
+    left: 40px; /* 섹션의 왼쪽에서 10px 간격 */
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* 아이콘 간 간격 */
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px; /* 원형 크기 */
+    height: 35px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-color: #000; /* 배경색 */
+    color: white; /* 아이콘 색상 */
+    text-decoration: none;
+    font-size: 1rem; /* 아이콘 크기 */
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #555;
+}
+
+/* 화면 크기에 따라 Hero 텍스트와 소셜 링크 정렬 */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .hero-text .tagline {
+        font-size: 1.2rem;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+/* solofit 대표 섹션 끝 */
+
+/* 인용 말 섹션 시작 */
+.testimonial-section {
+    background-color: #f9f9f9; /* 회색 배경 */
+    padding: 5rem 0; /* 위아래 여백 */
+}
+
+.testimonial {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* 아이콘과 텍스트를 세로로 정렬 */
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-icon {
+    font-size: 3rem; /* 아이콘 크기 */
+    color: #253C57;
+    margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    margin: 0;
+}
+/* 인용 말 섹션 끝 */
+
+/* 장점 섹션 시작 */
+.features-section {
+    background-image: url('이미지/장점섹션_배경.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 4rem 0; /* 섹션 위아래 여백 */
+}
+
+.feature-item {
+    margin-bottom: 1.5rem; /* 각 항목 간 간격 */
+}
+
+.feature-image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 어두운 오버레이: 투명도 50% */
+    z-index: 1; /* 오버레이가 이미지 위에 나타남 */
+}
+
+.feature-text {
+    z-index: 2; /* 텍스트가 오버레이 위에 보이도록 설정 */
+    color: #FFFFFF;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* 그림자 효과 추가 */
+}
+
+.feature-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #A7F6FF;
+}
+
+.feature-subtitle {
+    font-size: 1rem;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+    .feature-title {
+        font-size: 1.2rem;
+    }
+
+    .feature-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+/* 부위별, 기구별 검색 섹션 시작 */
+/* 섹션 컨테이너 */
+.section-container {
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: space-between; /* 이미지와 박스 간격 조정 */
+    height: 100vh; /* 섹션 높이 */
+    background-color: white; /* 배경색 */
+    position: relative;
+    overflow: hidden;
+    padding-top: 150px; /* 위쪽 여백 추가 */
+}
+
+/* 부위 페럴랙스 이미지 */
+.parallax-image_part {
+    float: right; /* 오른쪽으로 정렬 */
+    width: 60%; /* 화면의 60% 차지 */
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 페럴랙스 효과 */
+}
+
+.parallax-image_equ {
+    float: left; /* 왼쪽으로 정렬 */
+    width: 60%; /* 화면의 60% 차지 */
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 페럴랙스 효과 */
+}
+
+.right-image {
+    background-image: url('이미지/원하는 부위.jpg'); /* 부위별 섹션 이미지 경로 */
+}
+
+.left-image {
+    background-image: url('이미지/원하는 기구.jpeg'); /* 기구별 섹션 이미지 경로 */
+}
+
+/* 파란색 박스 */
+.blue-box_part {
+    width: 40%; /* 화면의 40% 차지 */
+    padding: 2rem;
+    background-color: #E6EEF5; /* 연한 파란색 */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%; /* 세로 중앙 배치 */
+    transform: translateY(-50%);
+    left: 5%; /* 왼쪽 배치 */
+}
+
+.blue-box_equ {
+    width: 40%; /* 화면의 40% 차지 */
+    padding: 2rem;
+    background-color: #E6EEF5; /* 연한 파란색 */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%; /* 세로 중앙 배치 */
+    transform: translateY(-50%);
+    right: 5%; /* 오른쪽 배치 */
+}
+
+.blue-box h2 {
+    color: #253C57;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.blue-box p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 버튼 스타일 */
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    background-color: #253C57;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #4682B4;
+}
+/* 부위별, 기구별 검색 섹션 끝 */
+
+/* 내 주변 운동시설 찾기 섹션 시작 */
+.static-section {
+    background-color: #f4f4f4; /* 회색 배경 */
+    padding: 3rem 0; /* 상하 여백 */
+    width: 100vw; /* 전체 화면 너비 */
+    margin-left: calc(-50vw + 50%); /* 배경을 양쪽 끝까지 확장 */
+    position: relative;
+}
+
+.static-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #253C57;
+}
+
+.static-section .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.gym-cards .card {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: space-between; /* 상하 여백 균등 분배 */
+}
+
+.image-placeholder {
+    height: 250px; /* 이미지 높이를 크게 설정 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-placeholder_1 {
+    background-image: url('이미지/핫한 헬스장_1.jpg');
+}
+
+.image-placeholder_2 {
+    background-image: url('이미지/핫한 헬스장_2.jpg');
+}
+
+.image-placeholder_3 {
+    background-image: url('이미지/핫한 헬스장_3.jpg');
+}
+
+.card-info {
+    padding: 1rem;
+    background-color: #253C57;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1; /* 남은 여백을 모두 채우게 설정 */
+    justify-content: space-between; /* 버튼이 맨 아래로 이동 */
+}
+
+.card-info button {
+    align-self: center; /* 버튼을 가운데 정렬 */
+    margin-top: auto; /* 버튼을 아래쪽으로 이동 */
+    width: 100%; /* 버튼 너비를 부모 요소에 맞춤 */
+    padding: 0.5rem 1rem;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.card-info button:hover {
+    background-color: #3578A4; /* 호버 색상 변경 */
+}
+
+.find-now {
+    padding: 1rem 2rem;
+    background-color: #253C57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.find-now:hover {
+    background-color: #4682B4;
+}
+/* 내 주변 운동시설 찾기 섹션 끝 */
+
+/* 소통 섹션 시작 */
+/* 페럴렉스 비디오 섹션 */
+.parallax-video-section {
+    position: relative;
+    height: 100vh; /* 섹션 높이를 화면 전체로 설정 */
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    background-color: white; /* 흰 배경 */
+    padding-top: 30px; /* 위쪽 여백 추가 */
+}
+
+.parallax-video-container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.parallax-video {
+    position: absolute;
+    top: 50%;
+    left: 100%; /* 오른쪽에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    min-width: 60%; /* 비디오가 화면의 60%를 차지 */
+    min-height: 50%;
+    object-fit: cover;
+    z-index: -1; /* 비디오를 뒤로 보냄 */
+    will-change: transform; /* 스크롤 성능 최적화 */
+}
+
+.overlay-box {
+    position: absolute;
+    top: 60%; /* 화면의 세로 중앙 */
+    left: 45%; /* 화면의 가로 중앙 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    background-color: rgba(200, 200, 200); /* 반투명 회색 */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 50%; /* 가로 너비를 60%로 설정 */
+    z-index: 2; /* 영상 위에 표시 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+}
+.overlay-box h2 {
+    color: #253C57;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.overlay-box p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 버튼 스타일 */
+.overlay-box .buttons {
+    display: flex; /* 플렉스박스를 활성화 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    gap: 1rem; /* 버튼 간 간격 */
+    margin-top: 1rem; /* 버튼 상단 여백 */
+}
+
+.overlay-box .buttons button {
+    background-color: #253C57;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-box .buttons button:hover {
+    background-color: #4682B4;
+}
+
+/* 페럴렉스 효과 */
+.parallax-video-section {
+    perspective: 0.8px;
+    transform-style: preserve-3d;
+}
+
+.parallax-video {
+    position: absolute;
+    top: 50%;
+    left: 100%; /* 오른쪽에 배치 */
+    transform: translate(-50%, -50%) scale(0.8); /* 확대 비율 조정 (scale 값) */
+    width: 100%; /* 비디오의 너비를 조정 */
+    height: auto; /* 자동으로 비율에 맞게 높이 조정 */
+    object-fit: contain; /* 비디오가 컨테이너 안에서 비율을 유지하며 맞춰짐 */
+    z-index: -1; /* 비디오를 뒤로 보냄 */
+}
+/* 소통 섹션 끝 */
+
+/* 풋터 스타일 시작 */
+.bold-text {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: white;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.footer-logo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo h2 {
+    font-size: 2.2rem;
+    color: #253C57;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* SNS 아이콘 스타일 */
+.social-icons {
+    margin-top: 1rem; /* 텍스트와 아이콘 간격 */
+    display: flex;
+    gap: 1rem; /* 아이콘 간격 */
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px; /* 원형 크기 */
+    height: 25px;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-color: #253C57; /* 아이콘 배경색 */
+    color: white; /* 아이콘 색상 */
+    font-size: 0.8rem; /* 아이콘 크기 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #4682B4; /* 호버 시 색상 변경 */
+}
+
+.footer-links {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #253C57;
+}
+
+.footer-link {
+    color: #555; /* 회색 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.3s ease; /* 부드러운 색상 전환 */
+}
+
+.footer-link:hover {
+    color: #4682B4; /* 호버 시 파란색으로 변경 */
+    text-decoration: none; /* 호버 시에도 밑줄 없음 */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    background-color: #f4f4f4; /* 회색 배경 */
+    padding-bottom: 1rem; /* 아래쪽 여백 추가 */
+}
+/* 풋터 스타일 끝 */

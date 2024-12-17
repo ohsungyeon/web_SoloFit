@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SoloFit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- 네비게이션 바 시작 -->
+    <nav class="navbar navbar-expand-md bg-light navbar-light">
+        <div class="container">
+            <!-- 로고 -->
+            <a class="navbar-brand" href="index.html">SoloFit</a>
+
+            <!-- 모바일 토글 버튼 -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- 네비게이션 메뉴 -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <!-- 드롭다운 메뉴들 -->
+                <ul class="navbar-nav mb-2 mb-lg-0 me-3">
+                    <!-- 부위 드롭다운 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownBuui" role="button" data-bs-toggle="dropdown" aria-expanded="false">부위</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownBuui">
+                            <li><a class="dropdown-item" href="part_chest.html">가슴</a></li>
+                            <li><a class="dropdown-item" href="part_back.html">등</a></li>
+                            <li><a class="dropdown-item" href="part_lowerBody.html">하체</a></li>
+                            <li><a class="dropdown-item" href="part_shoulder.html">어깨</a></li>
+                            <li><a class="dropdown-item" href="part_aerobic.html">유산소</a></li>
+                        </ul>
+                    </li>
+                    <!-- 기구 드롭다운 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownKigu" role="button" data-bs-toggle="dropdown" aria-expanded="false">기구</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownKigu">
+                            <li><a class="dropdown-item" href="equ_bodyweight.html">맨몸</a></li>
+                            <li><a class="dropdown-item" href="equ_barbell.html">바벨</a></li>
+                            <li><a class="dropdown-item" href="equ_dumbbell.html">덤벨</a></li>
+                            <li><a class="dropdown-item" href="equ_band.html">밴드</a></li>
+                            <li><a class="dropdown-item" href="equ_machine.html">머신</a></li>
+                            <li><a class="dropdown-item" href="equ_cable-machine.html">케이블 머신</a></li>
+                        </ul>
+                    </li>
+                    <!-- 내 주변 운동시설 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="myplace.html">내 주변 운동시설</a>
+                    </li>
+                    <!-- 커뮤니티 드롭다운 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownCommunity" role="button" data-bs-toggle="dropdown" aria-expanded="false">커뮤니티</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownCommunity">
+                            <li><a class="dropdown-item" href="bulletinBoard.html">자유 게시판</a></li>
+                            <li><a class="dropdown-item" href="recording.html">운동 기록</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- 로그인 및 회원가입 -->
+                <div class="d-flex auth-links">
+                    <a href="#로그인" class="nav-link">로그인</a>
+                    <span class="auth-divider">|</span>
+                    <a href="#회원가입" class="nav-link">회원가입</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- 네비게이션 바 끝 -->
+
+    <!-- solofit 대표 섹션 시작 -->
+    <header>
+        <section class="hero d-flex align-items-center text-center">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <!-- 텍스트 영역 -->
+                    <div class="col-12 col-md-6">
+                        <div class="hero-text">
+                            <h1 class="display-1">SoloFit</h1>
+                            <p class="tagline h4">
+                                Empower Your Journey,<br>
+                                One Step at a Time with SoloFit
+                            </p>
+                        </div>
+                    </div>
+                    <!-- 소셜 링크 영역 -->
+                    <div class="col-12 col-md-6">
+                        <div class="social-links d-flex justify-content-center gap-3">
+                            <a href="#페이스북" class="social-icon"><i class="bi bi-facebook"></i></a>
+                            <a href="#트위터" class="social-icon"><i class="bi bi-twitter"></i></a>
+                            <a href="#유튜브" class="social-icon"><i class="bi bi-youtube"></i></a>
+                            <a href="#인스타그램" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- solofit 대표 섹션 끝 -->
+
+    <!-- 인용 말 섹션 시작 -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <!-- 첫 번째 인용 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="testimonial">
+                        <i class="bi bi-person-circle testimonial-icon"></i>
+                        <blockquote class="testimonial-quote">"혼자 운동하기 어려워요."</blockquote>
+                    </div>
+                </div>
+                <!-- 두 번째 인용 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="testimonial">
+                        <i class="bi bi-chat-left-quote testimonial-icon"></i>
+                        <blockquote class="testimonial-quote">"정확한 자세를 모르겠어요."</blockquote>
+                    </div>
+                </div>
+                <!-- 세 번째 인용 -->
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="testimonial">
+                        <i class="bi bi-people-fill testimonial-icon"></i>
+                        <blockquote class="testimonial-quote">"같이 할 수 있는 친구가 있으면 좋을 것 같아요."</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 인용 말 섹션 끝 -->
+
+    <!-- 장점 섹션 시작 -->
+    <section class="features-section">
+        <div class="container text-center">
+            <h2 class="section-title mb-5">SoloFit에서 전부 누릴 수 있어요</h2>
+            <div class="row g-4">
+                <!-- 첫 번째 항목 -->
+                <div class="col-12 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-image" style="background-image: url('이미지/장점섹션_1.jpg');">
+                            <div class="feature-text">
+                                <h3 class="feature-title">부위별 운동 방법</h3>
+                                <p class="feature-subtitle">부위별로 운동 방법을 확인할 수 있어요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 두 번째 항목 -->
+                <div class="col-12 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-image" style="background-image: url('이미지/장점섹션_2.jpg');">
+                            <div class="feature-text">
+                                <h3 class="feature-title">기구별 운동 방법</h3>
+                                <p class="feature-subtitle">기구별로 운동 방법을 확인할 수 있어요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 세 번째 항목 -->
+                <div class="col-12 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-image" style="background-image: url('이미지/장점섹션_3.jpg');">
+                            <div class="feature-text">
+                                <h3 class="feature-title">내 주변 운동시설</h3>
+                                <p class="feature-subtitle">내 주변 운동시설을 찾아보세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 네 번째 항목 -->
+                <div class="col-12 col-md-6">
+                    <div class="feature-item">
+                        <div class="feature-image" style="background-image: url('이미지/장점섹션_4.jpg');">
+                            <div class="feature-text">
+                                <h3 class="feature-title">커뮤니티</h3>
+                                <p class="feature-subtitle">다른 사람들과 소통해보세요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 장점 섹션 끝 -->
+
+    <!-- 원하는 부위를 검색 섹션 시작-->
+    <section class="section-container">
+        <div class="parallax-image_part right-image"></div>
+        <div class="blue-box blue-box_part">
+            <h2>원하는 부위를 검색해보세요</h2>
+            <p>Search for the exercise part you want</p>
+            <div class="buttons">
+                <button onclick="location.href='part_chest.html'">가슴</button>
+                <button onclick="location.href='part_back.html'">등</button>
+                <button onclick="location.href='part_aerobic.html'">유산소</button>
+                <button onclick="location.href='part_shoulder.html'">어깨</button>
+                <button onclick="location.href='part_lowerBody.html'">하체</button>
+            </div>
+        </div>
+    </section>
+    <!-- 원하는 부위를 검색 섹션 끝끝-->
+
+    <!-- 원하는 기구를 검색 섹션 시작-->
+    <section class="section-container">
+        <div class="parallax-image_equ left-image"></div>
+        <div class="blue-box blue-box_equ">
+            <h2>원하는 기구를 검색해보세요</h2>
+            <p>Search for the exercise equipment you want</p>
+            <div class="buttons">
+                <button onclick="location.href='equ_bodyweight.html'">맨몸</button>
+                <button onclick="location.href='equ_barbell.html'">바벨</button>
+                <button onclick="location.href='equ_dumbbell.html'">덤벨</button>
+                <button onclick="location.href='equ_band.html'">밴드</button>
+                <button onclick="location.href='equ_machine.html'">머신</button>
+                <button onclick="location.href='equ_cable-machine.html'">케이블 머신</button>
+            </div>
+        </div>
+    </section>
+    <!-- 원하는 기구를 검색 섹션 끝-->
+
+    <!-- 내 주변 운동시설 찾기 섹션 시작 -->
+    <section class="static-section">
+        <div class="text-center mb-4">
+            <h2>내 주변 운동시설을 찾아보세요</h2>
+            <p class="subtitle">요즘 핫한 헬스장</p>
+        </div>
+        <!-- 카드 그룹 -->
+        <div class="container">
+            <div class="row g-4 justify-content-center gym-cards">
+                <!-- 첫 번째 카드 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card h-100">
+                        <div class="image-placeholder image-placeholder_1"></div>
+                        <div class="card-info">
+                            <h3>피트니스 헬스장</h3>
+                            <p>위치: 서울특별시 중구 00로</p>
+                            <p>62,700원~</p>
+                            <button onclick="location.href='place1_detail.html'" class="details-button">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 두 번째 카드 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card h-100">
+                        <div class="image-placeholder image-placeholder_2"></div>
+                        <div class="card-info">
+                            <h3>펄스힛 헬스장</h3>
+                            <p>위치: 서울특별시 중구 00로</p>
+                            <p>33,000원~</p>
+                            <button onclick="location.href='place2_detail.html'" class="details-button">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 세 번째 카드 -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card h-100">
+                        <div class="image-placeholder image-placeholder_3"></div>
+                        <div class="card-info">
+                            <h3>겟투게더 헬스장</h3>
+                            <p>위치: 서울특별시 중구 00로</p>
+                            <p>44,000원~</p>
+                            <button onclick="location.href='place3_detail.html'" class="details-button">자세히 보기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <!-- '지금 찾아보기' 버튼 -->
+        <div class="text-center mt-4">
+            <button onclick="location.href='myplace.html'" class="find-now">지금 찾아보기</button>
+        </div>
+    </section>
+    <!-- 내 주변 운동시설 찾기 섹션 끝 -->
+
+    <!-- 소통 섹션 시작 -->
+    <section class="parallax-video-section">
+        <div class="parallax-video-container">
+            <video autoplay muted loop class="parallax-video">
+                <source src="동영상/소통 섹션 동영상.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay-box">
+                <h2>다른 사람들과 소통해보세요</h2>
+                <p>Communicate with others</p>
+                <div class="buttons">
+                    <button onclick="location.href='bulletinBoard.html'">자유 게시판</button>
+                    <button onclick="location.href='recording.html'">운동 기록</button>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- 소통 섹션 끝 -->
+
+    <!-- 풋터 시작 -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2 class="bold-text">SoloFit</h2>
+                <p>SoloFit을 통해 자세한 운동 방법을 확인하세요.</p>
+                <div class="social-icons">
+                    <a href="#facebook" class="social-icon"><i class="bi bi-facebook"></i></a>
+                    <a href="#twitter" class="social-icon"><i class="bi bi-twitter"></i></a>
+                    <a href="#youtube" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    <a href="#instagram" class="social-icon"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4 class="bold-text">부위</h4>
+                    <ul>
+                        <li><a href="part_chest.html" class="footer-link">가슴</a></li>
+                        <li><a href="part_back.html" class="footer-link">등</a></li>
+                        <li><a href="part_lowerBody.html" class="footer-link">하체</a></li>
+                        <li><a href="part_shoulder.html" class="footer-link">어깨</a></li>
+                        <li><a href="part_aerobic.html" class="footer-link">유산소</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="bold-text">기구</h4>
+                    <ul>
+                        <li><a href="equ_bodyweight.html" class="footer-link">맨몸</a></li>
+                        <li><a href="equ_barbell.html" class="footer-link">바벨</a></li>
+                        <li><a href="equ_dumbbell.html" class="footer-link">덤벨</a></li>
+                        <li><a href="equ_band.html" class="footer-link">밴드</a></li>
+                        <li><a href="equ_machine.html" class="footer-link">머신</a></li>
+                        <li><a href="equ_cable-machine.html" class="footer-link">케이블 머신</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="bold-text">내 주변 운동시설</h4>
+                    <ul>
+                        <li><a href="myplace.html" class="footer-link">내 주변 운동시설</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="bold-text">커뮤니티</h4>
+                    <ul>
+                        <li><a href="bulletinBoard.html" class="footer-link">자유 게시판</a></li>
+                        <li><a href="recording.html" class="footer-link">운동 기록</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"> 
+            <div>© 2024 by SungyeonOh | ohsungyeon@naver.com | 010-0000-0000</div>
+        </div>
+    </footer>
+    <!-- 풋터 끝 -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
